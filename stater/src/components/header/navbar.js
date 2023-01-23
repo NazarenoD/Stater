@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+
+
+
 import {
   MDBContainer,
   MDBNavbar,
@@ -37,7 +40,7 @@ export default function Navbar() {
         <MDBCollapse navbar show={showBasic}>
           <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current='page' href='#'>
+              <MDBNavbarLink active aria-current='page' href={"/"}>
                 Home
               </MDBNavbarLink>
             </MDBNavbarItem>
@@ -51,11 +54,11 @@ export default function Navbar() {
                   Distribuciones
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
-                  <MDBDropdownItem link><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Bin &nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Binomial </MDBDropdownItem>
-                  <MDBDropdownItem link><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Hgeo</span>&nbsp;&nbsp; Hipergeometrica </MDBDropdownItem>
-                  <MDBDropdownItem link><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Po &nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Poisson </MDBDropdownItem>
-                  <MDBDropdownItem link><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Exp &nbsp;&nbsp;</span>&nbsp;&nbsp; Exponencial </MDBDropdownItem>
-                  <MDBDropdownItem link><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ N &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Normal </MDBDropdownItem>
+                  <MDBDropdownItem link href={"/"}><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Bin &nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Binomial </MDBDropdownItem>
+                  <MDBDropdownItem link href={"/"}><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Hgeo</span>&nbsp;&nbsp; Hipergeometrica </MDBDropdownItem>
+                  <MDBDropdownItem link href={"/"}><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Po &nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Poisson </MDBDropdownItem>
+                  <MDBDropdownItem link href={"/"}><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Exp &nbsp;&nbsp;</span>&nbsp;&nbsp; Exponencial </MDBDropdownItem>
+                  <MDBDropdownItem link href={"/"}><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ N &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Normal </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarItem>

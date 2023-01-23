@@ -2,7 +2,6 @@ import React from 'react';
 import {
   MDBCarousel,
   MDBCarouselItem,
-  MDBBtn,
 } from 'mdb-react-ui-kit';
 
 import CarouselCard from './carouse-card';
