@@ -14,6 +14,7 @@ import {
   MDBDropdownMenu,
   MDBDropdownItem,
   MDBCollapse,
+  
 } from 'mdb-react-ui-kit';
 
 export default function Navbar() {
@@ -47,12 +48,14 @@ export default function Navbar() {
             <MDBNavbarItem>
               <MDBDropdown>
                 <MDBDropdownToggle tag='a' className='nav-link' role='button'>
-                  Dropdown
+                  Distribuciones
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
-                  <MDBDropdownItem link>Action</MDBDropdownItem>
-                  <MDBDropdownItem link>Another action</MDBDropdownItem>
-                  <MDBDropdownItem link>Something else here</MDBDropdownItem>
+                  <MDBDropdownItem link><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Bin &nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Binomial </MDBDropdownItem>
+                  <MDBDropdownItem link><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Hgeo</span>&nbsp;&nbsp; Hipergeometrica </MDBDropdownItem>
+                  <MDBDropdownItem link><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Po &nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Poisson </MDBDropdownItem>
+                  <MDBDropdownItem link><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Exp &nbsp;&nbsp;</span>&nbsp;&nbsp; Exponencial </MDBDropdownItem>
+                  <MDBDropdownItem link><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ N &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Normal </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarItem>
