@@ -22,39 +22,37 @@ ChartJS.register(
   Legend
 );
 
-export const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: 'top',
-    },
-    title: {
-      display: true,
-      text: 'Chart.js Bar Chart',
-    },
-  },
-};
-
-
-
-
 const stats = new Statistics()
 
 
 
-const labels = [0, 1, 2, 3, 4, 5];
+export function BarPlot(props) {
+    
+    
+    const options = {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+          title: {
+            display: true,
+            text: 'Binomial',
+          },
+        },
+      };
 
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Dataset 2',
-      data: stats.binomialDistribution(5, 0.5),
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-    },
-  ],
-};
 
-export function BarPlot() {
-  return <Bar options={options} data={data} />;
+    const labs = Array.from({length: (parseInt(props.data.n)+1) }, (v, i) => i);
+    const data = {
+        labels : labs,
+        datasets: [
+          {
+            label: 'Dataset 2',
+            data: stats.binomialDistribution(props.data.n, props.data.p),
+            backgroundColor: 'rgba(53, 162, 235, 0.5)',
+          },
+        ],
+      };
+    return <Bar options={options} data={data} />;
 }
