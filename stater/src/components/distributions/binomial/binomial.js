@@ -5,10 +5,14 @@ import  { MathJaxContext, MathJax } from 'better-react-mathjax'
 
 import { BarPlot } from './bar-figure';
 
-export default function Distribution() {
+export default function Binomial() {
     const [n,set_n] = useState(5)
+    const [nArr,set_nArr] = useState([0,1,2,3,4,5])
     const handle_n = event => {
         set_n(event.target.value)
+
+        const arr = Array.from({length: (parseInt(event.target.value)+1) }, (v, i) => i);
+        set_nArr(arr)
     }
 
     const [p,set_p] = useState(0.5)
@@ -18,7 +22,7 @@ export default function Distribution() {
 
     const [x,set_x] = useState(2)
     const handle_x = event => {
-        set_p(event.target.value)
+        set_x(event.target.value)
     }
 
     const [r,set_r] = useState('-')
@@ -36,7 +40,7 @@ export default function Distribution() {
 
 
 
-    <div>
+    <div className='mt-4'>
     <div className='d-flex justify-content-around'>
     <div className='w-50 m-4 d-flex'>
         <div className='m-auto'>
@@ -111,7 +115,8 @@ export default function Distribution() {
              "n" : n, 
              "p" : p,
              "x" : x,
-             "r" : r
+             "r" : r,
+             "nArr" : nArr
              }} />
     
     </div>

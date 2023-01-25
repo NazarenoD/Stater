@@ -6,18 +6,17 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Navbar from './components/header/navbar';
 import Footer from './components/footer/footer';
 import Carousel from './components/body/carousel';
-import Distribution from './components/figures/distributions';
 
-import { BarPlot } from './components/figures/bar-figure';
+import Binomial from './components/distributions/binomial/binomial';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
-      <Distribution/>
+      
       <Router>
       <Routes>
-          <Route exact path="/distributions" element={<BarPlot/>}/>
+          <Route exact path="/Binomial" element={<Binomial/>}/>
           <Route exact path="/" element={<Carousel/>}/>
       </Routes>
       </Router>
