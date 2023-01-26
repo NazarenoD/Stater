@@ -10,11 +10,13 @@ import Carousel from './components/body/carousel';
 import Binomial from './components/distributions/binomial/binomial';
 import Poisson from './components/distributions/poisson/poisson';
 import Hgeo from './components/distributions/hgeo/hgeo';
+import Exp from './components/distributions/exp/exp';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
+      <Exp/>
       <Router>
       <Routes>
           <Route exact path="/Binomial" element={<Binomial/>}/>
