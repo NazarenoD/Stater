@@ -6,11 +6,11 @@ import { Linep } from './bar-figure';
 
 
 
-export default function Exp() {
+export default function Normal() {
   
-    const [v,set_v] = useState(5)
-    const handle_v = event => {
-        set_v(event.target.value)
+    const [z,set_z] = useState(0)
+    const handle_z = event => {
+        set_z(event.target.value)
     }
 
     const [x,set_x] = useState(2)
@@ -37,10 +37,7 @@ export default function Exp() {
         <div className='m-auto'>
         <MDBRow>
         <MDBCol>
-          <MDBInput type="number" min={1} max={100} id='ex1' label={<div>gl [v]</div>} onChange={handle_v} value={v}/>
-        </MDBCol>
-        <MDBCol>
-          <MDBInput type="number" min={0} id='ex2' label='Exitos [x]' onChange={handle_x} value={x}/>
+          <MDBInput type="number" step={0.1} id='ex1' label={<div>Estand. [z]</div>} onChange={handle_z} value={z}/>
         </MDBCol>
         </MDBRow>
         </div>
@@ -68,21 +65,14 @@ export default function Exp() {
     <div className='m-2'>
     <MathJaxContext>
             <MathJax className="Math-c">{
-            "\\("+"Pr\\left(X\\leq r\\right) = \\sum_{x=0} ^r \\frac{\\lambda^{x}e^{-\\lambda}}{x!}"+"\\)"
+            "\\("+"z=\\frac{x-\\mu}{\\sigma}"+"\\)"
             }</MathJax>
     </MathJaxContext>
     </div>
     <div className='m-2'>
     <MathJaxContext>
             <MathJax className="Math-c">{
-            "\\("+"E\\left(X\\right)=\\lambda"+"\\)"
-            }</MathJax>
-    </MathJaxContext>
-    </div>
-    <div className='m-2'>
-    <MathJaxContext>
-            <MathJax className="Math-c">{
-            "\\("+"V\\left(X\\right)=\\lambda"+"\\)"
+            "\\("+"Pr\\left(X\\leq x\\right) = \\int_{-\\infty}^{x} \\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{1}{2} z^{2}}dz"+"\\)"
             }</MathJax>
     </MathJaxContext>
     </div>
@@ -96,8 +86,7 @@ export default function Exp() {
 
     <Linep
     data = {{
-        'v': v,
-        'x': x,
+        'z': z,
         'r': r
     }}
     />

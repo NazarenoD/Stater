@@ -10,18 +10,19 @@ import Carousel from './components/body/carousel';
 import Binomial from './components/distributions/binomial/binomial';
 import Poisson from './components/distributions/poisson/poisson';
 import Hgeo from './components/distributions/hgeo/hgeo';
-import Exp from './components/distributions/exp/exp';
+import Normal from './components/distributions/normal/normal';
+
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
-      <Exp/>
       <Router>
       <Routes>
           <Route exact path="/Binomial" element={<Binomial/>}/>
           <Route exact path="/Poisson" element={<Poisson/>}/>
           <Route exact path="/Hipergeometric" element={<Hgeo/>}/>
+          <Route exact path="/Normal" element={<Normal/>}/>
           <Route exact path="/" element={<Carousel/>}/>
       </Routes>
       </Router>
