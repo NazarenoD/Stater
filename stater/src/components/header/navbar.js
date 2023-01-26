@@ -56,7 +56,7 @@ export default function Navbar() {
                 <MDBDropdownMenu>
                   <MDBDropdownItem link href={"/Binomial"}><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Bin &nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Binomial </MDBDropdownItem>
                   <MDBDropdownItem link href={"/"}><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Hgeo</span>&nbsp;&nbsp; Hipergeometrica </MDBDropdownItem>
-                  <MDBDropdownItem link href={"/"}><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Po &nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Poisson </MDBDropdownItem>
+                  <MDBDropdownItem link href={"/Poisson"}><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Po &nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Poisson </MDBDropdownItem>
                   <MDBDropdownItem link href={"/"}><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Exp &nbsp;&nbsp;</span>&nbsp;&nbsp; Exponencial </MDBDropdownItem>
                   <MDBDropdownItem link href={"/"}><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ N &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Normal </MDBDropdownItem>
                 </MDBDropdownMenu>
