@@ -4,7 +4,8 @@ export default function ResultDiscrete(props){
     let r = props.dataRes.r
     let x = parseInt(props.dataRes.x)
     let n = parseInt(props.dataRes.n)
-    let p = parseFloat(props.dataRes.p)
+    let K = parseFloat(props.dataRes.K)
+    let N = parseFloat(props.dataRes.N)
     let data = props.dataRes.data
     if (r==='='){
       return (
@@ -12,10 +13,10 @@ export default function ResultDiscrete(props){
         <MathJaxContext>
         <MathJax className="Math-c">{"\\("+`Pr \\left(X=x \\right) = ${data[x].toFixed(4)} `+"\\)"}</MathJax>
         <MathJax className="Math-c">{
-            "\\("+`E\\left(X\\right)=${(n*p).toFixed(4)}`+"\\)"
+            "\\("+`E\\left(X\\right)=${(n*(K/N)).toFixed(4)}`+"\\)"
             }</MathJax>
             <MathJax className="Math-c">{
-            "\\("+`V\\left(X\\right)=${(n*p*(1-p)).toFixed(4)}`+"\\)"
+            "\\("+`V\\left(X\\right)=${(n*(K/N)*(1-(K/N))*((N-n)/(N-1))).toFixed(4)}`+"\\)"
             }</MathJax>
         </MathJaxContext>
         </div>
@@ -29,10 +30,10 @@ export default function ResultDiscrete(props){
         <MathJaxContext>
         <MathJax className="Math-c">{"\\("+`Pr \\left(X \\leq x \\right) = ${sum.toFixed(4)} `+"\\)"}</MathJax>
         <MathJax className="Math-c">{
-            "\\("+`E\\left(X\\right)=${(n*p).toFixed(4)}`+"\\)"
+            "\\("+`E\\left(X\\right)=${(n*(K/N)).toFixed(4)}`+"\\)"
             }</MathJax>
             <MathJax className="Math-c">{
-            "\\("+`V\\left(X\\right)=${(n*p*(1-p)).toFixed(4)}`+"\\)"
+            "\\("+`V\\left(X\\right)=${(n*(K/N)*(1-(K/N))*((N-n)/(N-1))).toFixed(4)}`+"\\)"
             }</MathJax>
         </MathJaxContext>
         </div>
@@ -46,10 +47,10 @@ export default function ResultDiscrete(props){
             <MathJaxContext>
             <MathJax className="Math-c">{"\\("+`Pr \\left(X>x \\right) = ${sum.toFixed(4)} `+"\\)"}</MathJax>
             <MathJax className="Math-c">{
-            "\\("+`E\\left(X\\right)=${(n*p).toFixed(4)}`+"\\)"
+            "\\("+`E\\left(X\\right)=${(n*(K/N)).toFixed(4)}`+"\\)"
             }</MathJax>
             <MathJax className="Math-c">{
-            "\\("+`V\\left(X\\right)=${(n*p*(1-p)).toFixed(4)}`+"\\)"
+            "\\("+`V\\left(X\\right)=${(n*(K/N)*(1-(K/N))*((N-n)/(N-1))).toFixed(4)}`+"\\)"
             }</MathJax>
             </MathJaxContext>
             </div>

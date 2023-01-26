@@ -5,20 +5,12 @@ import  { MathJaxContext, MathJax } from 'better-react-mathjax'
 
 import { BarPlot } from './bar-figure';
 
-export default function Binomial() {
+export default function Hgeo() {
     const [n,set_n] = useState(5)
-    const [nArr,set_nArr] = useState([0,1,2,3,4,5])
     const handle_n = event => {
         set_n(event.target.value)
-
-        const arr = Array.from({length: (parseInt(event.target.value)+1) }, (v, i) => i);
-        set_nArr(arr)
     }
 
-    const [p,set_p] = useState(0.5)
-    const handle_p = event => {
-        set_p(event.target.value)
-    }
 
     const [x,set_x] = useState(2)
     const handle_x = event => {
@@ -28,7 +20,18 @@ export default function Binomial() {
     const [r,set_r] = useState('-')
     const handle_r = event => {
         set_r(event.target.value)
-        console.log(event.target.value)
+    }
+
+    const [N,set_N] = useState(8)
+    const [arr,set_NArr] = useState([0,1,2,3,4,5,6,7,8])
+    const handle_N = event => {
+        const arr = Array.from({length: (parseInt(event.target.value)+1) }, (v, i) => i);
+        set_NArr(arr)
+        set_N(event.target.value)
+    }
+    const [K,set_K] = useState(5)
+    const handle_K = event => {
+        set_K(event.target.value)
     }
 
   return (
@@ -49,15 +52,23 @@ export default function Binomial() {
           <MDBInput type="number" min={0} id='ex0' label='Ensayos [n]' onChange={handle_n} value={n}/>
         </MDBCol>
         <MDBCol>
-          <MDBInput type="number" min={0} max={1} step={0.01} id='ex1' label='Probabilidad [p]' onChange={handle_p} value={p}/>
-        </MDBCol>
-        <MDBCol>
           <MDBInput type="number" min={0} id='ex2' label='Exitos [x]' onChange={handle_x} value={x}/>
         </MDBCol>
+        </MDBRow>
+
+        <MDBRow className='mt-2'>
+        <MDBCol>
+          <MDBInput type="number" min={0} id='ex0' label='Poblacion [N]' onChange={handle_N} value={N}/>
+        </MDBCol>
+        <MDBCol>
+          <MDBInput type="number" min={0} id='ex1' label='Exitos Pob. [K]' onChange={handle_K} value={K}/>
+        </MDBCol>
+       
         </MDBRow>
         </div>
         
     </div>
+    
     
 
     </div>
@@ -85,21 +96,21 @@ export default function Binomial() {
     <div className='m-2'>
     <MathJaxContext>
             <MathJax className="Math-c">{
-            "\\("+"Pr\\left(X\\leq r\\right) = \\sum_{x=0}^r \\left(\\begin{array}{c}n\\\\ x\\end{array}\\right) p^{x} \\left(1-p\\right)^{n-x}"+"\\)"
+            "\\("+"Pr\\left(X\\leq r \\right) = \\sum_{x=1}^r \\frac{\\left(\\begin{array}{c}K\\\\ x\\end{array}\\right) \\left(\\begin{array}{c}N-K \\\\ n-x\\end{array}\\right)}{\\left(\\begin{array}{c}N\\\\ n\\end{array}\\right)}"+"\\)"
             }</MathJax>
     </MathJaxContext>
     </div>
     <div className='m-2'>
     <MathJaxContext>
             <MathJax className="Math-c">{
-            "\\("+"E\\left(X\\right)=np"+"\\)"
+            "\\("+"E\\left(X\\right)=n\\left(\\frac{K}{N}\\right)"+"\\)"
             }</MathJax>
     </MathJaxContext>
     </div>
     <div className='m-2'>
     <MathJaxContext>
             <MathJax className="Math-c">{
-            "\\("+"V\\left(X\\right)=np(1-p)"+"\\)"
+            "\\("+"V\\left(X\\right)=n\\left(\\frac{K}{N}\\right)\\left(1-\\frac{K}{N} \\right)\\left(\\frac{N-n}{N-1}\\right)"+"\\)"
             }</MathJax>
     </MathJaxContext>
     </div>
@@ -113,10 +124,11 @@ export default function Binomial() {
 
         <BarPlot data= {{
              "n" : n, 
-             "p" : p,
              "x" : x,
              "r" : r,
-             "nArr" : nArr
+             "K" : K,
+             "N" : N,
+             "NArr" : arr
              }} />
     
     </div>

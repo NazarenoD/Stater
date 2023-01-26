@@ -47,9 +47,17 @@ export function BarPlot(props) {
         }
       }
       return(colorsArr)
-     
     }
-    
+   
+    const arr = []
+    const denominator = stats.binomialCoefficient(parseInt(props.data.N),parseInt(props.data.n))
+    for (let i=0;i<=parseInt(props.data.N);i++){
+      let sol = stats.binomialCoefficient(parseInt(props.data.K),i)*
+                stats.binomialCoefficient(parseInt(props.data.N)-parseInt(props.data.K),props.data.n-i)/
+                denominator
+      arr.push(sol || 0)
+    }
+   
     const options = {
         responsive: true,
         plugins: {
@@ -58,22 +66,21 @@ export function BarPlot(props) {
           },
           title: {
             display: true,
-            text: 'Binomial',
+            text: 'Hipergeometrica',
           },
         },
       };
     
     const data = {
-        labels : props.data.nArr,
+        labels : props.data.NArr,
         datasets: [
           {
             label: 'Probabilidad',
-            data: stats.binomialDistribution(parseInt(props.data.n), props.data.p),
-            backgroundColor: colors(props.data.x,props.data.n,props.data.r)//['rgba(53, 162, 235, 0.5)','rgba(53, 162, 235, 0.5)','rgba(30, 30, 30, 1)','rgba(53, 162, 235, 0.5)','rgba(53, 162, 235, 0.5)'],
+            data: arr,
+            backgroundColor: colors(props.data.x,props.data.N,props.data.r)
           },
         ],
       };
-
       
     return (
       <>
@@ -83,8 +90,9 @@ export function BarPlot(props) {
       "x" : props.data.x,
       "n" : props.data.n,
       "r" : props.data.r,
-      "p" : props.data.p,
-      "data": data.datasets[0].data}}
+      "N" : props.data.N,
+      "K" : props.data.K,
+      "data": arr}}
 
     />
     </>
