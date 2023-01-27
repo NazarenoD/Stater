@@ -67,7 +67,7 @@ export function BarPlot(props) {
         datasets: [
           {
             label: 'Probabilidad',
-            data: stats.poissonDistribution(parseInt(props.data.lambda)),
+            data: stats.poissonDistribution(parseFloat(props.data.lambda)),
              //['rgba(53, 162, 235, 0.5)','rgba(53, 162, 235, 0.5)','rgba(30, 30, 30, 1)','rgba(53, 162, 235, 0.5)','rgba(53, 162, 235, 0.5)'],
           },
         ],

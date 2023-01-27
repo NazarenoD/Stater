@@ -9,7 +9,10 @@ export default function Poisson() {
   
     const [lambda,set_lambda] = useState(5)
     const handle_lambda = event => {
-        set_lambda(event.target.value)
+        if(parseFloat(event.target.value)>0){
+            set_lambda(event.target.value)
+        }
+        
     }
 
     const [x,set_x] = useState(2)

@@ -9,7 +9,7 @@ export default function Binomial() {
     const [n,set_n] = useState(5)
     const [nArr,set_nArr] = useState([0,1,2,3,4,5])
     const handle_n = event => {
-        set_n(event.target.value)
+        set_n(event.target.value||0)
 
         const arr = Array.from({length: (parseInt(event.target.value)+1) }, (v, i) => i);
         set_nArr(arr)
@@ -17,7 +17,7 @@ export default function Binomial() {
 
     const [p,set_p] = useState(0.5)
     const handle_p = event => {
-        set_p(event.target.value)
+        set_p(event.target.value||0)
     }
 
     const [x,set_x] = useState(2)

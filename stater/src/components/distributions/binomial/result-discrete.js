@@ -10,7 +10,7 @@ export default function ResultDiscrete(props){
       return (
         <div className='d-flex justify-content-around mb-2'>
         <MathJaxContext>
-        <MathJax className="Math-c">{"\\("+`Pr \\left(X=x \\right) = ${data[x].toFixed(4)} `+"\\)"}</MathJax>
+        <MathJax className="Math-c">{"\\("+`Pr \\left(X=x \\right) = ${(data[x]||0).toFixed(4)} `+"\\)"}</MathJax>
         <MathJax className="Math-c">{
             "\\("+`E\\left(X\\right)=${(n*p).toFixed(4)}`+"\\)"
             }</MathJax>

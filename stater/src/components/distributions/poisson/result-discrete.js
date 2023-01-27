@@ -3,13 +3,13 @@ import  { MathJaxContext, MathJax } from 'better-react-mathjax'
 export default function ResultDiscrete(props){
     let r = props.dataRes.r
     let x = parseInt(props.dataRes.x)
-    let lambda = parseInt(props.dataRes.lambda)
+    let lambda = parseFloat(props.dataRes.lambda)
     let data = props.dataRes.data
     if (r==='='){
       return (
         <div className='d-flex justify-content-around mb-2'>
         <MathJaxContext>
-        <MathJax className="Math-c">{"\\("+`Pr \\left(X=x \\right) = ${data[x].toFixed(4)} `+"\\)"}</MathJax>
+        <MathJax className="Math-c">{"\\("+`Pr \\left(X=x \\right) = ${(data[x]||0).toFixed(4)} `+"\\)"}</MathJax>
         <MathJax className="Math-c">{
             "\\("+`E\\left(X\\right)=${(lambda).toFixed(4)}`+"\\)"
             }</MathJax>
