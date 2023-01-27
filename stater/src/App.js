@@ -11,6 +11,7 @@ import Binomial from './components/distributions/binomial/binomial';
 import Poisson from './components/distributions/poisson/poisson';
 import Hgeo from './components/distributions/hgeo/hgeo';
 import Normal from './components/distributions/normal/normal';
+import AOV from './components/anova/groups';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <div className="App">
       <Navbar/>
       <Router>
+      <AOV/>
       <Routes>
           <Route exact path="/Binomial" element={<Binomial/>}/>
           <Route exact path="/Poisson" element={<Poisson/>}/>
