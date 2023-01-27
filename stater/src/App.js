@@ -19,12 +19,12 @@ function App() {
     <div className="App">
       <Navbar/>
       <Router>
-      <AOV/>
       <Routes>
           <Route exact path="/Binomial" element={<Binomial/>}/>
           <Route exact path="/Poisson" element={<Poisson/>}/>
           <Route exact path="/Hipergeometric" element={<Hgeo/>}/>
           <Route exact path="/Normal" element={<Normal/>}/>
+          <Route exact path="/Anova" element={<AOV/>}/>
           <Route exact path="/" element={<Carousel/>}/>
       </Routes>
       </Router>
