@@ -1,15 +1,24 @@
 import React from 'react';
 import  { MathJaxContext, MathJax } from 'better-react-mathjax'
 import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
+import Boxplot from './boxplot';
 
 
 export default function Calculus(props){
+    const alpha = parseFloat(props.data.alpha)
+    
+    let jSearch = alpha>0.09? '0,1': (alpha>0.04? '0,05': '0,01')
 
-    const g1 = props.data.g1.filter(Boolean)
-    const g2 = props.data.g2.filter(Boolean)
-    const g3 = props.data.g3.filter(Boolean)
-    const g4 = props.data.g4.filter(Boolean)
-    const g5 = props.data.g5.filter(Boolean)
+    const filterWithZero = (item)=>{return (item === 0) || (isFinite(item))}
+
+    const g1 = props.data.g1.filter(filterWithZero)
+    const g2 = props.data.g2.filter(filterWithZero)
+    const g3 = props.data.g3.filter(filterWithZero)
+    const g4 = props.data.g4.filter(filterWithZero)
+    const g5 = props.data.g5.filter(filterWithZero)
+
+
+
 
     const mean = (arr)=>{
         let sum = 0
@@ -29,6 +38,7 @@ export default function Calculus(props){
         })
         return gm
     }
+    
 
     const setStats = (arr)=>{
         let vars = []
@@ -49,24 +59,13 @@ export default function Calculus(props){
             let gmsce = 0
             values.map((x,i)=>{
                 gmsce = gmsce +sizes[i] * Math.pow(x-genMedia,2)
-                console.log("hola")
-                console.log(Math.pow(x-genMedia,2)*sizes[i])
-                console.log("media general")
-                console.log(genMedia)
-                console.log("tamaño")
-                console.log(sizes[i])
-                console.log("valor de xz")
-                console.log(x)
-                console.log("dif cuadrad")
-                console.log(Math.pow(x-genMedia,2))
-           
-                console.log(gmsce)
+    
             })
             return gmsce
         }
-      
+        
         arr.map((x,i)=>{
-                if(x[0] && x[1]){
+                if(isFinite(x[0]) && isFinite(x[1])){
                     if (variance(x) !==0){
                         totalArray = totalArray.concat(x)
                         
@@ -79,7 +78,6 @@ export default function Calculus(props){
                 } 
         })
     
-        
         let gmt = generalMean(means,sizes)
         let N = totalArray.length
         let c = sizes.length
@@ -99,8 +97,11 @@ export default function Calculus(props){
         }
     }
     const summary = setStats([g1,g2,g3,g4,g5])
-    console.log(summary)
+    let num = summary.c - 1
+    let den = (summary.N - summary.c - 1)>=0 ? summary.N - summary.c - 1 : summary.N - summary.c
 
+    const f = require('./f.json')
+   
     return(
         <>
         <div className="d-flex justify-content-around m-2">
@@ -126,7 +127,7 @@ export default function Calculus(props){
         </div>
         <hr></hr>
         <hr></hr>
-
+        
 
         <MDBTable>
         <MDBTableHead>
@@ -136,31 +137,60 @@ export default function Calculus(props){
           <th scope='col'>Grados de libertad</th>
           <th scope='col'>Cuadrados medios</th>
           <th scope='col'>F observado</th>
-          <th scope='col'>p-value</th>
+          <th scope='col'>F crítico</th>
         </tr>
         </MDBTableHead>
         <MDBTableBody>
         <tr>
           <th scope='row'>Entre Grupos</th>
-          <td>{summary.SCE} </td>
+          <td>{(summary.SCE||0).toFixed(2)} </td>
           <td>{summary.c-1}</td>
-          <td>{(summary.SCE)/(summary.c-1)}</td>
-          <td>{((summary.SCE)/(summary.c-1))/((summary.SCT-summary.SCE)/(summary.N-summary.c))||0}</td>
-          <td>@mdo</td>
+          <td>{((summary.SCE)/(summary.c-1)).toFixed(2)}</td>
+          <td>{(((summary.SCE)/(summary.c-1))/((summary.SCT-summary.SCE)/(summary.N-summary.c))||0).toFixed(2)}</td>
+          <td>{(f[jSearch][den][num]||0).toFixed(2)}</td>
         </tr>
         <tr>
           <th scope='row'>Dentro de Grupos</th>
-          <td>{summary.SCT-summary.SCE}</td>
+          <td>{(summary.SCT-summary.SCE).toFixed(2)}</td>
           <td>{summary.N-summary.c}</td>
-          <td>{(summary.SCT-summary.SCE)/(summary.N-summary.c)||0}</td>
+          <td>{((summary.SCT-summary.SCE)/(summary.N-summary.c)||0).toFixed(2)}</td>
         </tr>
         <tr>
           <th scope='row'>Total</th>
-          <td>{summary.SCT}</td>
+          <td>{(summary.SCT).toFixed(2)}</td>
           <td>{summary.N-1}</td>
         </tr>
         </MDBTableBody>
         </MDBTable>
+        <Boxplot
+        data = {{
+                'g1':{
+                    'name': 'grupo-1',
+                    y : g1,
+                    type: 'box'
+                },
+                'g2':{
+                    'name': 'grupo-2',
+                    y : g2,
+                    type: 'box'
+                },
+                'g3':{
+                    'name': 'grupo-3',
+                    y : g3,
+                    type: 'box'
+                },
+                'g4':{
+                    'name': 'grupo-4',
+                    y : g4,
+                    type: 'box'
+                },
+                'g5':{
+                    'name': 'grupo-5',
+                    y : g5,
+                    type: 'box'
+                },
+            }
+        }/>
         </>
     )
 

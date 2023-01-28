@@ -11,7 +11,7 @@ export default function Binomial() {
     const handle_n = event => {
         set_n(event.target.value||0)
 
-        const arr = Array.from({length: (parseInt(event.target.value)+1) }, (v, i) => i);
+        const arr = Array.from({length: (parseInt(event.target.value)+1) }, (v, i) => i)
         set_nArr(arr)
     }
 

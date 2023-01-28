@@ -3,6 +3,8 @@ import { MDBTable, MDBTableHead, MDBTableBody, MDBInput } from 'mdb-react-ui-kit
 import Calculus from './calculus';
 
 export default function TableAOV(props) {
+    const alpha = props.data.alpha
+
     const groups = parseInt(props.data.groups)
     const rows = parseInt(props.data.rows)
     const arrGroup = Array.from({length: (groups + 1) }, (v, i) => i+1)
@@ -94,6 +96,7 @@ export default function TableAOV(props) {
         'g3':g3,
         'g4':g4,
         'g5':g5,
+        'alpha':alpha,
     }}
     />
     </>
