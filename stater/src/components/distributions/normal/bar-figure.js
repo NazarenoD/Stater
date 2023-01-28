@@ -94,7 +94,8 @@ export function Linep(props) {
   <ResultDiscrete
   dataRes={{
     'probability':probability,
-    'r':r
+    'r':r,
+    'z':z
   }} />
   </>
   )
