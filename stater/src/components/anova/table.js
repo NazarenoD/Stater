@@ -67,7 +67,7 @@ export default function TableAOV(props) {
   return (
     <>
     <MDBTable>
-      <MDBTableHead className='bg-dark'>
+      <MDBTableHead className='bg-light'>
         <tr>
           <th scope='col'>#</th>
           {arrGroup.map((m,v)=>{

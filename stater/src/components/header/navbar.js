@@ -40,7 +40,7 @@ export default function Navbar() {
           <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
             <MDBNavbarItem>
               <MDBNavbarLink active aria-current='page' href={"/"}>
-                Home
+                Inicio
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
@@ -49,7 +49,7 @@ export default function Navbar() {
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current='page' href={"/"}>
+              <MDBNavbarLink active aria-current='page' href={"/Regression"}>
                 Regresion
               </MDBNavbarLink>
             </MDBNavbarItem>

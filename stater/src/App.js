@@ -12,6 +12,7 @@ import Poisson from './components/distributions/poisson/poisson';
 import Hgeo from './components/distributions/hgeo/hgeo';
 import Normal from './components/distributions/normal/normal';
 import AOV from './components/anova/groups';
+import Regression from './components/regression/groups';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/Hipergeometric" element={<Hgeo/>}/>
           <Route exact path="/Normal" element={<Normal/>}/>
           <Route exact path="/Anova" element={<AOV/>}/>
+          <Route exact path="/Regression" element={<Regression/> }/>
           <Route exact path="/" element={<Carousel/>}/>
       </Routes>
       </Router>
