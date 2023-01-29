@@ -33,6 +33,11 @@ export default function Binomial() {
 
   return (
     <>
+    <br></br>
+    <br></br>
+    <br></br>
+    
+
 
     <div className="container">
     <div className="row">

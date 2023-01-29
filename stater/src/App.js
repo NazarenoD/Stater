@@ -13,12 +13,15 @@ import Hgeo from './components/distributions/hgeo/hgeo';
 import Normal from './components/distributions/normal/normal';
 import AOV from './components/anova/groups';
 import Regression from './components/regression/groups';
+import Exercises from './components/exercises/excercises';
+
 
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
+
       <Router>
       <Routes>
           <Route exact path="/Binomial" element={<Binomial/>}/>
@@ -27,6 +30,7 @@ function App() {
           <Route exact path="/Normal" element={<Normal/>}/>
           <Route exact path="/Anova" element={<AOV/>}/>
           <Route exact path="/Regression" element={<Regression/> }/>
+          <Route exact path="/Exercises" element={<Exercises/> }/>
           <Route exact path="/" element={<Carousel/>}/>
       </Routes>
       </Router>

@@ -12,6 +12,10 @@ const imagb3 = require('../../img/imgbg3r.jpg')
 
 export default function Carousel() {
   return (
+    <>
+    <br></br>
+    <br></br>
+   
     <MDBCarousel showControls showIndicators>
       <MDBCarouselItem
         className='w-100 d-block'
@@ -20,7 +24,9 @@ export default function Carousel() {
         alt='...'
       >
         <div className='content-carousel w-50'>
-            <CarouselCard/>
+            <CarouselCard
+            data = {{'id':1}}
+            />
         </div>
       </MDBCarouselItem>
       <MDBCarouselItem
@@ -30,7 +36,9 @@ export default function Carousel() {
         alt='...'
       >
         <div className='content-carousel w-50'>
-            <CarouselCard/>
+            <CarouselCard
+            data = {{'id':2}}
+            />
         </div>
 
       </MDBCarouselItem>
@@ -41,10 +49,13 @@ export default function Carousel() {
         alt='...'
       >
         <div className='content-carousel w-50'>
-            <CarouselCard/>
+            <CarouselCard
+            data = {{'id':3}}
+            />
         </div>
       </MDBCarouselItem>
     </MDBCarousel>
+    </>
     
   );
 }

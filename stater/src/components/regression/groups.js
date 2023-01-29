@@ -19,6 +19,9 @@ export default function Regression() {
 
   return (
     <>
+    <br></br>
+    <br></br>
+    <br></br>
     <MDBRow className='d-flex justify-content-around m-2'>
       <MDBCol>
         <div className='d-flex justify-content-center'>

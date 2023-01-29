@@ -23,9 +23,9 @@ export default function Navbar() {
   const [showBasic, setShowBasic] = useState(false);
 
   return (
-    <MDBNavbar expand='lg' light bgColor='light'>
+    <MDBNavbar expand='lg' light bgColor='light' className='navbar fixed-top scrolling-navbar'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#'>Brand</MDBNavbarBrand>
+        <MDBNavbarBrand href='#'>STATER</MDBNavbarBrand>
 
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'
@@ -51,6 +51,11 @@ export default function Navbar() {
             <MDBNavbarItem>
               <MDBNavbarLink active aria-current='page' href={"/Regression"}>
                 Regresion
+              </MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink active aria-current='page' href={"/Exercises"}>
+                Ejercicios
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
