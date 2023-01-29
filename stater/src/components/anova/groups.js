@@ -10,7 +10,7 @@ import TableAOV from './table';
 export default function AOV() {
     const [groups,SetGroups] = useState(2)
     const handleGroups = (event)=>{
-        SetGroups(event.target.value)
+        SetGroups(parseInt(event.target.value)-1)
     }
     const [rows,SetRows] = useState(3)
 
@@ -18,7 +18,6 @@ export default function AOV() {
     const handleAlpha = (event)=>{
         SetAlpha(event.target.value)
     }
-
 
   return (
     <>
