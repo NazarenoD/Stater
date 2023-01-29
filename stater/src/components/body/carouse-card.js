@@ -8,7 +8,7 @@ import {
   MDBBtn
 } from 'mdb-react-ui-kit';
 
-export default function App() {
+export default function CarouselCard() {
   return (
     <MDBCard className='pt-1 bg-dark'>
       <MDBCardBody className='bg-dark'>

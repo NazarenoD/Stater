@@ -6,13 +6,17 @@ import {
 
 import CarouselCard from './carouse-card';
 
+const imagb1 = require('../../img/imgbg1r.jpg')
+const imagb2 = require('../../img/imgbg2r.jpg')
+const imagb3 = require('../../img/imgbg3r.jpg')
+
 export default function Carousel() {
   return (
     <MDBCarousel showControls showIndicators>
       <MDBCarouselItem
         className='w-100 d-block'
         itemId={1}
-        src='https://mdbootstrap.com/img/new/slides/041.jpg'
+        src={imagb1}
         alt='...'
       >
         <div className='content-carousel w-50'>
@@ -22,7 +26,7 @@ export default function Carousel() {
       <MDBCarouselItem
         className='w-100 d-block'
         itemId={2}
-        src='https://mdbootstrap.com/img/new/slides/042.jpg'
+        src={imagb2}
         alt='...'
       >
         <div className='content-carousel w-50'>
@@ -33,7 +37,7 @@ export default function Carousel() {
       <MDBCarouselItem
         className='w-100 d-block'
         itemId={3}
-        src='https://mdbootstrap.com/img/new/slides/043.jpg'
+        src={imagb3}
         alt='...'
       >
         <div className='content-carousel w-50'>
