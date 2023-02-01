@@ -70,17 +70,17 @@ export default function Binomial() {
         <div>
         <MDBRadio name='r' id='r-' label={
             <MathJaxContext>
-                <MathJax className="Math-c">{"\\("+"Pr \\left(X \\leq x \\right)"+"\\)"}</MathJax>
+                <MathJax className="Math-c">{"\\(Pr \\left(X \\leq x \\right)\\)"}</MathJax>
             </MathJaxContext>} defaultChecked onChange={handle_r} value={'-'}/>
 
         <MDBRadio name='r' id='r=' label={
             <MathJaxContext>
-                <MathJax className="Math-c">{"\\("+"Pr \\left(X=x \\right)"+"\\)"}</MathJax>
+                <MathJax className="Math-c">{"\\(Pr \\left(X=x \\right)\\)"}</MathJax>
             </MathJaxContext>} onChange={handle_r} value={'='}/>
 
         <MDBRadio name='r' id='r+' label={
             <MathJaxContext>
-                <MathJax className="Math-c">{"\\("+"Pr \\left(X>x \\right)"+"\\)"}</MathJax>
+                <MathJax className="Math-c">{"\\(Pr \\left(X>x \\right)\\)"}</MathJax>
             </MathJaxContext>} onChange={handle_r} value={'+'}/>
         </div>
     </div>
@@ -90,21 +90,21 @@ export default function Binomial() {
     <div className='m-2'>
     <MathJaxContext>
             <MathJax className="Math-c">{
-            "\\("+"Pr\\left(X\\leq r\\right) = \\sum_{x=0}^r \\left(\\begin{array}{c}n\\\\ x\\end{array}\\right) p^{x} \\left(1-p\\right)^{n-x}"+"\\)"
+            "\\(Pr\\left(X\\leq r\\right) = \\sum_{x=0}^r \\left(\\begin{array}{c}n\\\\ x\\end{array}\\right) p^{x} \\left(1-p\\right)^{n-x}\\)"
             }</MathJax>
     </MathJaxContext>
     </div>
     <div className='m-2'>
     <MathJaxContext>
             <MathJax className="Math-c">{
-            "\\("+"E\\left(X\\right)=np"+"\\)"
+            "\\(E\\left(X\\right)=np\\)"
             }</MathJax>
     </MathJaxContext>
     </div>
     <div className='m-2'>
     <MathJaxContext>
             <MathJax className="Math-c">{
-            "\\("+"V\\left(X\\right)=np(1-p)"+"\\)"
+            "\\(V\\left(X\\right)=np(1-p)\\)"
             }</MathJax>
     </MathJaxContext>
     </div>

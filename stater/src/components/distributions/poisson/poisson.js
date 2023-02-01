@@ -58,17 +58,17 @@ export default function Poisson() {
         <div>
         <MDBRadio name='r' id='r-' label={
             <MathJaxContext>
-                <MathJax className="Math-c">{"\\("+"Pr \\left(X \\leq x \\right)"+"\\)"}</MathJax>
+                <MathJax className="Math-c">{"\\(Pr \\left(X \\leq x \\right)\\)"}</MathJax>
             </MathJaxContext>} defaultChecked onChange={handle_r} value={'-'}/>
 
         <MDBRadio name='r' id='r=' label={
             <MathJaxContext>
-                <MathJax className="Math-c">{"\\("+"Pr \\left(X=x \\right)"+"\\)"}</MathJax>
+                <MathJax className="Math-c">{"\\(Pr \\left(X=x \\right)\\)"}</MathJax>
             </MathJaxContext>} onChange={handle_r} value={'='}/>
 
         <MDBRadio name='r' id='r+' label={
             <MathJaxContext>
-                <MathJax className="Math-c">{"\\("+"Pr \\left(X>x \\right)"+"\\)"}</MathJax>
+                <MathJax className="Math-c">{"\\(Pr \\left(X>x \\right)\\)"}</MathJax>
             </MathJaxContext>} onChange={handle_r} value={'+'}/>
         </div>
     </div>
@@ -78,21 +78,21 @@ export default function Poisson() {
     <div className='m-2'>
     <MathJaxContext>
             <MathJax className="Math-c">{
-            "\\("+"Pr\\left(X\\leq r\\right) = \\sum_{x=0} ^r \\frac{\\lambda^{x}e^{-\\lambda}}{x!}"+"\\)"
+            "\\(Pr\\left(X\\leq r\\right) = \\sum_{x=0} ^r \\frac{\\lambda^{x}e^{-\\lambda}}{x!}\\)"
             }</MathJax>
     </MathJaxContext>
     </div>
     <div className='m-2'>
     <MathJaxContext>
             <MathJax className="Math-c">{
-            "\\("+"E\\left(X\\right)=\\lambda"+"\\)"
+            "\\(E\\left(X\\right)=\\lambda\\)"
             }</MathJax>
     </MathJaxContext>
     </div>
     <div className='m-2'>
     <MathJaxContext>
             <MathJax className="Math-c">{
-            "\\("+"V\\left(X\\right)=\\lambda"+"\\)"
+            "\\(V\\left(X\\right)=\\lambda\\)"
             }</MathJax>
     </MathJaxContext>
     </div>

@@ -79,17 +79,17 @@ export default function Hgeo() {
         <div>
         <MDBRadio name='r' id='r-' label={
             <MathJaxContext>
-                <MathJax className="Math-c">{"\\("+"Pr \\left(X \\leq x \\right)"+"\\)"}</MathJax>
+                <MathJax className="Math-c">{"\\(Pr \\left(X \\leq x \\right)\\)"}</MathJax>
             </MathJaxContext>} defaultChecked onChange={handle_r} value={'-'}/>
 
         <MDBRadio name='r' id='r=' label={
             <MathJaxContext>
-                <MathJax className="Math-c">{"\\("+"Pr \\left(X=x \\right)"+"\\)"}</MathJax>
+                <MathJax className="Math-c">{"\\(Pr \\left(X=x \\right)\\)"}</MathJax>
             </MathJaxContext>} onChange={handle_r} value={'='}/>
 
         <MDBRadio name='r' id='r+' label={
             <MathJaxContext>
-                <MathJax className="Math-c">{"\\("+"Pr \\left(X>x \\right)"+"\\)"}</MathJax>
+                <MathJax className="Math-c">{"\\(Pr \\left(X>x \\right)\\)"}</MathJax>
             </MathJaxContext>} onChange={handle_r} value={'+'}/>
         </div>
     </div>
@@ -99,21 +99,21 @@ export default function Hgeo() {
     <div className='m-2'>
     <MathJaxContext>
             <MathJax className="Math-c">{
-            "\\("+"Pr\\left(X\\leq r \\right) = \\sum_{x=1}^r \\frac{\\left(\\begin{array}{c}K\\\\ x\\end{array}\\right) \\left(\\begin{array}{c}N-K \\\\ n-x\\end{array}\\right)}{\\left(\\begin{array}{c}N\\\\ n\\end{array}\\right)}"+"\\)"
+            "\\(Pr\\left(X\\leq r \\right) = \\sum_{x=1}^r \\frac{\\left(\\begin{array}{c}K\\\\ x\\end{array}\\right) \\left(\\begin{array}{c}N-K \\\\ n-x\\end{array}\\right)}{\\left(\\begin{array}{c}N\\\\ n\\end{array}\\right)}\\)"
             }</MathJax>
     </MathJaxContext>
     </div>
     <div className='m-2'>
     <MathJaxContext>
             <MathJax className="Math-c">{
-            "\\("+"E\\left(X\\right)=n\\left(\\frac{K}{N}\\right)"+"\\)"
+            "\\(E\\left(X\\right)=n\\left(\\frac{K}{N}\\right)\\)"
             }</MathJax>
     </MathJaxContext>
     </div>
     <div className='m-2'>
     <MathJaxContext>
             <MathJax className="Math-c">{
-            "\\("+"V\\left(X\\right)=n\\left(\\frac{K}{N}\\right)\\left(1-\\frac{K}{N} \\right)\\left(\\frac{N-n}{N-1}\\right)"+"\\)"
+            "\\(V\\left(X\\right)=n\\left(\\frac{K}{N}\\right)\\left(1-\\frac{K}{N} \\right)\\left(\\frac{N-n}{N-1}\\right)\\)"
             }</MathJax>
     </MathJaxContext>
     </div>

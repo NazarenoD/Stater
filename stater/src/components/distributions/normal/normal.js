@@ -13,10 +13,6 @@ export default function Normal() {
         set_z(event.target.value)
     }
 
-    const [x,set_x] = useState(2)
-    const handle_x = event => {
-        set_x(event.target.value)
-    }
 
     const [r,set_r] = useState('-')
     const handle_r = event => {
@@ -53,12 +49,12 @@ export default function Normal() {
         <div>
         <MDBRadio name='r' id='r-' label={
             <MathJaxContext>
-                <MathJax className="Math-c">{"\\("+"Pr \\left(X \\leq x \\right)"+"\\)"}</MathJax>
+                <MathJax className="Math-c">{"\\(Pr \\left(X \\leq x \\right)\\)"}</MathJax>
             </MathJaxContext>} defaultChecked onChange={handle_r} value={'-'}/>
 
         <MDBRadio name='r' id='r+' label={
             <MathJaxContext>
-                <MathJax className="Math-c">{"\\("+"Pr \\left(X>x \\right)"+"\\)"}</MathJax>
+                <MathJax className="Math-c">{"\\(Pr \\left(X>x \\right)\\)"}</MathJax>
             </MathJaxContext>} onChange={handle_r} value={'+'}/>
         </div>
     </div>
@@ -68,22 +64,20 @@ export default function Normal() {
     <div className='m-2'>
     <MathJaxContext>
             <MathJax className="Math-c">{
-            "\\("+"z=\\frac{x-\\mu}{\\sigma}"+"\\)"
+            "\\(z=\\frac{x-\\mu}{\\sigma}\\)"
             }</MathJax>
     </MathJaxContext>
     </div>
     <div className='m-2'>
     <MathJaxContext>
             <MathJax className="Math-c">{
-            "\\("+"Pr\\left(X\\leq x\\right) = \\int_{-\\infty}^{x} \\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{1}{2} z^{2}}dz"+"\\)"
+            "\\(Pr\\left(X\\leq x\\right) = \\int_{-\\infty}^{x} \\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{1}{2} z^{2}}dz\\)"
             }</MathJax>
     </MathJaxContext>
     </div>
     </div>
     </div>
     </div>
-
-
 
     <div className="col-md">
 
@@ -93,15 +87,9 @@ export default function Normal() {
         'r': r
     }}
     />
-    
     </div>
     </div>
     </div>
-
-
-
-
-
     </>
 
   );
