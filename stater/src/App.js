@@ -1,7 +1,8 @@
 
 import './App.css';
+// BrowserRouter (normal production) HashRouter (github)
 
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 
 import Navbar from './components/header/navbar';
 import Footer from './components/footer/footer';
@@ -19,9 +20,8 @@ import Regression from './components/regression/groups';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-
       <Router>
+      <Navbar/>
       <Routes>
           <Route exact path="/Binomial" element={<Binomial/>}/>
           <Route exact path="/Poisson" element={<Poisson/>}/>
@@ -31,8 +31,8 @@ function App() {
           <Route exact path="/Regression" element={<Regression/> }/>
           <Route exact path="/" element={<Carousel/>}/>
       </Routes>
-      </Router>
       <Footer/>
+      </Router>
     </div>
   );
 }
