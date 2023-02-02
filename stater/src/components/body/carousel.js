@@ -5,16 +5,19 @@ import {
 } from 'mdb-react-ui-kit';
 
 import CarouselCard from './carouse-card';
+import Hello from './hello';
 
 const imagb1 = require('../../img/imgbg1r.jpg')
 const imagb2 = require('../../img/imgbg2r.jpg')
-const imagb3 = require('../../img/imgbg3r.jpg')
+
 
 export default function Carousel() {
   return (
     <>
     <br></br>
     <br></br>
+    <br></br>
+    <Hello/>
    
     <MDBCarousel showControls showIndicators>
       <MDBCarouselItem
@@ -41,18 +44,6 @@ export default function Carousel() {
             />
         </div>
 
-      </MDBCarouselItem>
-      <MDBCarouselItem
-        className='w-100 d-block'
-        itemId={3}
-        src={imagb3}
-        alt='...'
-      >
-        <div className='content-carousel w-50'>
-            <CarouselCard
-            data = {{'id':3}}
-            />
-        </div>
       </MDBCarouselItem>
     </MDBCarousel>
     </>

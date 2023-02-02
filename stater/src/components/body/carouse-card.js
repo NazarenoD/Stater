@@ -22,11 +22,6 @@ export default function CarouselCard(props) {
     description = 'Compara medias rapidamente'
     link = '/Anova'
   }
-  if(id===3){
-    title = 'Ejercicios'
-    description = 'Practica Practica y Practica!'
-    link = '/Exercises'
-  }
   return (
     <MDBCard className='pt-1 bg-dark'>
       <MDBCardBody className='bg-dark'>

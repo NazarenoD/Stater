@@ -12,15 +12,11 @@ export default function Footer() {
       <MDBContainer className='p-4'>
         <section className='mb-4'>
 
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='instagram' />
-          </MDBBtn>
-
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
+          <MDBBtn outline color="light" floating className='m-1' target="_blank" href='https://www.linkedin.com/in/nazareno-dominguez-b32750230/' role='button'>
             <MDBIcon fab icon='linkedin-in' />
           </MDBBtn>
 
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
+          <MDBBtn outline color="light" floating className='m-1' target="_blank" href='https://github.com/NazarenoD' role='button'>
             <MDBIcon fab icon='github' />
           </MDBBtn>
         </section>
