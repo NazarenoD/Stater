@@ -138,6 +138,8 @@ export default function Binomial() {
     <br></br>
     <br></br>
     <br></br>
+    <br></br>
+    <br></br>
 
 
 
