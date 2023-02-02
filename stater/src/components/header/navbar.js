@@ -59,10 +59,10 @@ export default function Navbar() {
                   Distribuciones
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
-                  <MDBDropdownItem link><Link to="/Binomial"><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Bin &nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Binomial </Link></MDBDropdownItem>
-                  <MDBDropdownItem link ><Link to="/Hipergeometric"><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Hgeo</span>&nbsp;&nbsp; Hipergeometrica </Link></MDBDropdownItem>
-                  <MDBDropdownItem link ><Link to="/Poisson"><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Po &nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Poisson </Link></MDBDropdownItem>
-                  <MDBDropdownItem link ><Link to="/Normal"><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ N &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Normal </Link></MDBDropdownItem>
+                <Link to="/Binomial"><MDBDropdownItem link><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Bin &nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Binomial </MDBDropdownItem></Link>
+                <Link to="/Hipergeometric"><MDBDropdownItem link ><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Hgeo</span>&nbsp;&nbsp; Hipergeometrica </MDBDropdownItem></Link>
+                <Link to="/Poisson"><MDBDropdownItem link ><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Po &nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Poisson </MDBDropdownItem></Link>
+                <Link to="/Normal"><MDBDropdownItem link ><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ N &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Normal </MDBDropdownItem></Link>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarItem>
