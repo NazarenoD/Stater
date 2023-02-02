@@ -30,10 +30,11 @@ export default function CarouselCard(props) {
         <MDBCardText className='text-white card-carousel'>{description}</MDBCardText>
         <div className='justify-content-center align-items-center h-100'>
                 <div className='text-white'>
+                <Link to={link}>
                 <MDBBtn tag="a" outline size="lg">
-                  <Link to={link}></Link>
                 Vamos!
                 </MDBBtn>
+                </Link>
                 </div>
             </div>
       </MDBCardBody>
