@@ -134,6 +134,10 @@ export default function Binomial() {
      nombrado así en honor de Jakob Bernoulli (1654-1705), matemático y científico suizo.
       Publicada en su obra póstuma Ars Conjectandi en 1713.</h4>
     </div>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
 
 
 

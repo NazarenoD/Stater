@@ -120,7 +120,10 @@ export default function Poisson() {
      que quería modelar la frecuencia de eventos durante un intervalo de tiempo fijado.
       También participó en perfeccionar la ley de los grandes números.</h4>
     </div>
-
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
 
 
     </>

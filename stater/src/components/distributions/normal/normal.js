@@ -95,6 +95,10 @@ export default function Normal() {
         Posteriormente, Carl Friedrich Gauss (1777-1855) elaboró desarrollos más profundos y formuló la ecuación de la curva; 
         de ahí que también se la conozca, más comúnmente, como la"campana de Gauss".</h4>
     </div>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
     </>
 
   );

@@ -144,6 +144,10 @@ export default function Hgeo() {
     en una muestra de tamaño fijo tomada sin reposición. Fue obtenida por Jakob Bernoulli (1654-1705) y 
     publicada en su obra póstuma Ars Conjectandi en 1713.</h4>
     </div>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
 
 
     </>
