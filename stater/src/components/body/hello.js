@@ -18,7 +18,7 @@ export default function Hello() {
     <hr></hr>
     <h3 className='jtf text-white'>Adicionalmente podrás calcular probabilidades a partir de los modelos de probabilidad más conocidos y requeridos.</h3>
     <div className='d-flex justify-content-center'>
-    <MDBListGroup light numbered style={{ minWidth: '22rem' }} className='w-25 m-2'>
+    <MDBListGroup dark numbered style={{ minWidth: '22rem' }} className='w-25 m-2'>
       <MDBListGroupItem className='bg-dark text-white p-2 bg-gradient jtf'>Binomial</MDBListGroupItem>
       <MDBListGroupItem className='bg-dark text-white p-2 bg-gradient jtf'>Hipergeométrica</MDBListGroupItem>
       <MDBListGroupItem className='bg-dark text-white p-2 bg-gradient jtf'>Poisson</MDBListGroupItem>
