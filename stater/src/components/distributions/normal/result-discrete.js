@@ -10,29 +10,23 @@ export default function ResultDiscrete(props){
       else return p
     }
     res(z)
-    if (r==='-'){
-      return (
+    let result = 0
+    
+    if (r === '-'){
+      result = res(z).toFixed(4)
+    }
+    if (r === '+'){
+      result = (1-res(z)).toFixed(4)
+    }
+
+    return (
         <div className='d-flex justify-content-around mb-2'>
         <MathJaxContext>
         <div className='d-flex'>
           <MathJax className="Math-c">{"\\(Pr \\left(X \\leq x \\right) = \\)"}</MathJax>
-        <div><b>{res(z).toFixed(4)}</b></div></div>
+        <div><b>{result}</b></div></div>
 
         </MathJaxContext>
         </div>
       )
-    }
-    if (r==='+'){
-        return (
-            <div className='d-flex justify-content-around mb-2'>
-            <MathJaxContext>
-            <div className='d-flex'>
-            <MathJax className="Math-c">{"\\(Pr \\left(X>x \\right) = \\)"}</MathJax>
-              <div><b>{(1-res(z)).toFixed(4)}</b></div>
-            </div>
-            
-            </MathJaxContext>
-            </div>
-          )
-      }
     }
