@@ -127,7 +127,13 @@ export default function Binomial() {
     </div>
     </div>
     </div>
-
+    <div className='text-justify m-2 p-2'>
+    <h4 style={{'text-align' : 'justify'}}>La distribución binomial es uno de los modelos matemáticos 
+    que más se utilizan para calcular la probabilidad de éxito de un evento, siempre y 
+    cuando la variable a analizar sea discreta. Se relaciona con el experimento aleatorio de Bernoulli,
+     nombrado así en honor de Jakob Bernoulli (1654-1705), matemático y científico suizo.
+      Publicada en su obra póstuma Ars Conjectandi en 1713.</h4>
+    </div>
 
 
 
