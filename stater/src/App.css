@@ -61,5 +61,11 @@
 }
 
 
+.jtf{
+  text-align : justify;
+}
 
-
+.bg-gv{
+  background: rgb(22,153,166);
+  background: linear-gradient(308deg, rgba(22,153,166,1) 2%, rgba(31,179,138,1) 30%, rgba(40,82,79,0.9808298319327731) 61%);
+}

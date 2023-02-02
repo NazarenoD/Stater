@@ -40,7 +40,7 @@ export const options = {
 };
 
 const Statistics = require('statistics.js');
-const stats = new Statistics()
+const stats = new Statistics([], {}, { })
 
 export function Linep(props) {
   const z = parseFloat(props.data.z)

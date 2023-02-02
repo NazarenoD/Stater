@@ -2,8 +2,6 @@ import React from 'react';
 import Plot from 'react-plotly.js';
 
 export default function Scatter(props){
-    console.log(Object.values(props.data))
-    console.log(props.data.predict)
     return (
       <Plot
         data={[

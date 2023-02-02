@@ -31,7 +31,7 @@ export default function CarouselCard(props) {
         <div className='justify-content-center align-items-center h-100'>
                 <div className='text-white'>
                 <Link to={link}>
-                <MDBBtn tag="a" outline size="lg">
+                <MDBBtn outline size="lg">
                 Vamos!
                 </MDBBtn>
                 </Link>

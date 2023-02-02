@@ -91,7 +91,7 @@ export default function Normal() {
     </div>
     </div>
     <div className='text-justify m-2 p-2'>
-    <h4 style={{'text-align' : 'justify'}}>La distribución normal fue reconocida por primera vez por el francés Abraham de Moivre (1667-1754). 
+    <h4 className='jtf'>La distribución normal fue reconocida por primera vez por el francés Abraham de Moivre (1667-1754). 
         Posteriormente, Carl Friedrich Gauss (1777-1855) elaboró desarrollos más profundos y formuló la ecuación de la curva; 
         de ahí que también se la conozca, más comúnmente, como la"campana de Gauss".</h4>
     </div>

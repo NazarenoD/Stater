@@ -59,8 +59,6 @@ export default function Calculus(props){
     let summary = stats(xValues,yValues)
     const f = require('./f.json')
     let glsearch = (yValues.length-3)>=0? (yValues.length-3):0
-    console.log('holaaaa summary')
-    console.log(summary)
 
     
     return(

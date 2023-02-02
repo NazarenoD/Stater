@@ -115,7 +115,7 @@ export default function Poisson() {
     </div>
 
     <div className='text-justify m-2 p-2'>
-    <h4 style={{'text-align' : 'justify'}}>El nombre de esta distribución proviene de su creador, 
+    <h4 className='jtf'>El nombre de esta distribución proviene de su creador, 
     Siméon-Denis Poisson (1781-1840), un matemático y filósofo francés,
      que quería modelar la frecuencia de eventos durante un intervalo de tiempo fijado.
       También participó en perfeccionar la ley de los grandes números.</h4>

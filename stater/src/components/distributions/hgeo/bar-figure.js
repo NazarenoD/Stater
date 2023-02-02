@@ -26,7 +26,7 @@ ChartJS.register(
   Legend
 );
 
-const stats = new Statistics()
+const stats = new Statistics([], {}, { })
 
 
 

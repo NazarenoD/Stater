@@ -15,8 +15,8 @@ export default function Carousel() {
   return (
     <>
     <br></br>
-    <br></br>
-    <br></br>
+  
+    
     <Hello/>
    
     <MDBCarousel showControls showIndicators>

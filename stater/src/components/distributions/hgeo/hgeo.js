@@ -140,7 +140,7 @@ export default function Hgeo() {
 
 
     <div className='text-justify m-2 p-2'>
-    <h4 style={{'text-align' : 'justify'}}>La distribución hipergeométrica es una distribución discreta que modela el número de eventos 
+    <h4 className='jtf'>La distribución hipergeométrica es una distribución discreta que modela el número de eventos 
     en una muestra de tamaño fijo tomada sin reposición. Fue obtenida por Jakob Bernoulli (1654-1705) y 
     publicada en su obra póstuma Ars Conjectandi en 1713.</h4>
     </div>

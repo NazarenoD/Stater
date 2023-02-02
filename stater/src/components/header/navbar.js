@@ -25,7 +25,9 @@ export default function Navbar() {
   return (
     <MDBNavbar expand='lg' light bgColor='light' className='navbar fixed-top scrolling-navbar'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#'>STATER</MDBNavbarBrand>
+        <Link className='text-dark' to ='/'>
+        <b>STATER</b>
+        </Link>
 
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'
@@ -38,34 +40,32 @@ export default function Navbar() {
 
         <MDBCollapse navbar show={showBasic}>
           <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
-            <MDBNavbarItem>
-              <MDBNavbarLink active aria-current='page'>
-              <Link to="/">Inicio</Link>
-              </MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBNavbarLink active aria-current='page'>
-              <Link to="/Anova">Anova</Link>
-              </MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBNavbarLink active aria-current='page'>
-              <Link to="/Regression">Regresion</Link>
-              </MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
+           
+              
+              <Link className='nav-item active m-2 text-dark' to="/">Inicio</Link>
+              
+           
+         
+              
+              <Link className='nav-item active m-2 text-dark' to="/Anova">Anova</Link>
+             
+    
+          
+              <Link className='nav-item active m-2 text-dark' to="/Regression">Regresion</Link>
+          
+            
               <MDBDropdown>
-                <MDBDropdownToggle tag='a' className='nav-link text-primary' role='button'>
+                <MDBDropdownToggle tag='a' className='nav-link text-dark' role='button'>
                   Distribuciones
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
-                <Link to="/Binomial"><MDBDropdownItem link><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Bin &nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Binomial </MDBDropdownItem></Link>
-                <Link to="/Hipergeometric"><MDBDropdownItem link ><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Hgeo</span>&nbsp;&nbsp; Hipergeometrica </MDBDropdownItem></Link>
-                <Link to="/Poisson"><MDBDropdownItem link ><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Po &nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Poisson </MDBDropdownItem></Link>
-                <Link to="/Normal"><MDBDropdownItem link ><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ N &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Normal </MDBDropdownItem></Link>
+                <Link className='dropdown-item' to="/Binomial"><i className="fas fa-dice"></i><span className="badge badge-success rounded-pill d-inline">~ Bin &nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Binomial </Link>
+                <Link className='dropdown-item' to="/Hipergeometric"><i className="fas fa-dice"></i><span className="badge badge-success rounded-pill d-inline">~ Hgeo</span>&nbsp;&nbsp; HGeo </Link>
+                <Link className='dropdown-item' to="/Poisson"><i className="fas fa-dice"></i><span className="badge badge-success rounded-pill d-inline">~ Po &nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Poisson </Link>
+                <Link className='dropdown-item' to="/Normal"><i className="fas fa-dice"></i><span className="badge badge-success rounded-pill d-inline">~ N &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Normal </Link>
                 </MDBDropdownMenu>
               </MDBDropdown>
-            </MDBNavbarItem>
+           
           </MDBNavbarNav>
 
         </MDBCollapse>
