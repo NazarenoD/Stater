@@ -14,8 +14,10 @@ export default function ResultDiscrete(props){
       return (
         <div className='d-flex justify-content-around mb-2'>
         <MathJaxContext>
-        <MathJax className="Math-c">{"\\("+`Pr \\left(X \\leq x \\right) = ${res(z).toFixed(4)} `+"\\)"}</MathJax>
-        
+        <div className='d-flex'>
+          <MathJax className="Math-c">{"\\(Pr \\left(X \\leq x \\right) = \\)"}</MathJax>
+        <div><b>{res(z).toFixed(4)}</b></div></div>
+
         </MathJaxContext>
         </div>
       )
@@ -24,8 +26,11 @@ export default function ResultDiscrete(props){
         return (
             <div className='d-flex justify-content-around mb-2'>
             <MathJaxContext>
-            <MathJax className="Math-c">{"\\("+`Pr \\left(X>x \\right) = ${(1-res(z)).toFixed(4)} `+"\\)"}</MathJax>
-           
+            <div className='d-flex'>
+            <MathJax className="Math-c">{"\\(Pr \\left(X>x \\right) = \\)"}</MathJax>
+              <div><b>{(1-res(z)).toFixed(4)}</b></div>
+            </div>
+            
             </MathJaxContext>
             </div>
           )

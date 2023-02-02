@@ -9,14 +9,24 @@ export default function ResultDiscrete(props){
     if (r==='='){
       return (
         <div className='d-flex justify-content-around mb-2'>
+          
         <MathJaxContext>
-        <MathJax className="Math-c">{"\\("+`Pr \\left(X=x \\right) = ${(data[x]||0).toFixed(4)} `+"\\)"}</MathJax>
-        <MathJax className="Math-c">{
-            "\\("+`E\\left(X\\right)=${(n*p).toFixed(4)}`+"\\)"
-            }</MathJax>
-            <MathJax className="Math-c">{
-            "\\("+`V\\left(X\\right)=${(n*p*(1-p)).toFixed(4)}`+"\\)"
-            }</MathJax>
+        <div className='d-flex'>
+        <MathJax className="Math-c">{"\\(Pr \\left(X=x \\right) =\\)"}</MathJax>
+        <div><b>{(data[x]||0).toFixed(4)}</b></div>
+        </div>
+
+        <div className='d-flex'>
+        <MathJax className="Math-c">{"\\(E\\left(X\\right)= \\)"}</MathJax>
+        <div><b>{(n*p).toFixed(4)}</b></div>
+        </div>
+
+
+        <div className='d-flex'>
+        <MathJax className="Math-c">{"\\(V\\left(X\\right)= \\)"}</MathJax>
+        <div><b>{(n*p*(1-p)).toFixed(4)}</b></div>
+        </div>
+
         </MathJaxContext>
         </div>
         )
@@ -26,16 +36,30 @@ export default function ResultDiscrete(props){
       data.slice(0,x+1).map(x=>sum = sum+x)
       return (
         <div className='d-flex justify-content-around mb-2'>
+        
         <MathJaxContext>
-        <MathJax className="Math-c">{"\\("+`Pr \\left(X \\leq x \\right) = ${sum.toFixed(4)} `+"\\)"}</MathJax>
+        <div className='d-flex'>
+        <MathJax className="Math-c">{"\\(Pr \\left(X \\leq x \\right) = \\)"}</MathJax>
+        <div><b>{sum.toFixed(4)}</b></div>
+        </div>
+
+        <div className='d-flex'>
         <MathJax className="Math-c">{
-            "\\("+`E\\left(X\\right)=${(n*p).toFixed(4)}`+"\\)"
+            "\\(E\\left(X\\right)=\\)"
             }</MathJax>
+            <div><b>{(n*p).toFixed(4)}</b></div>
+        </div>
+
+          <div className='d-flex'>
             <MathJax className="Math-c">{
-            "\\("+`V\\left(X\\right)=${(n*p*(1-p)).toFixed(4)}`+"\\)"
+            "\\(V\\left(X\\right)=\\)"
             }</MathJax>
+            <div><b>{(n*p*(1-p)).toFixed(4)}</b></div>
+          </div>
+
         </MathJaxContext>
         </div>
+        
       )
     }
     if (r==='+'){
@@ -44,13 +68,25 @@ export default function ResultDiscrete(props){
         return (
             <div className='d-flex justify-content-around mb-2'>
             <MathJaxContext>
-            <MathJax className="Math-c">{"\\("+`Pr \\left(X>x \\right) = ${sum.toFixed(4)} `+"\\)"}</MathJax>
+
+            <div className='d-flex'>
+            <MathJax className="Math-c">{"\\(Pr \\left(X>x \\right) = \\)"}</MathJax>
+            <div><b>{sum.toFixed(4)}</b></div>
+            </div>
+            <div className='d-flex'>
             <MathJax className="Math-c">{
-            "\\("+`E\\left(X\\right)=${(n*p).toFixed(4)}`+"\\)"
+            "\\(E\\left(X\\right)=\\)"
             }</MathJax>
+            <div><b>{(n*p).toFixed(4)}</b></div>
+            </div>
+
+          <div className='d-flex'>
             <MathJax className="Math-c">{
-            "\\("+`V\\left(X\\right)=${(n*p*(1-p)).toFixed(4)}`+"\\)"
+            "\\(V\\left(X\\right)=\\)"
             }</MathJax>
+            <div><b>{(n*p*(1-p)).toFixed(4)}</b></div>
+          </div>
+
             </MathJaxContext>
             </div>
           )

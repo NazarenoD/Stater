@@ -96,7 +96,9 @@ export default function Calculus(props){
           <th scope='col'>
           <div className="d-flex justify-content-around m-2">
             <MathJaxContext>
-            <MathJax className="Math-c">{"\\("+`r^2 = ${(summary.score||0).toFixed(2)}`+"\\)"}</MathJax>
+            <div className='d-flex'>
+            <MathJax className="Math-c">{"\\(r^2 =\\)"}</MathJax>
+            <div><b>{(summary.score||0).toFixed(2)}</b></div></div>
             </MathJaxContext>
         </div>
           </th>
@@ -132,8 +134,19 @@ export default function Calculus(props){
         <div className="d-flex justify-content-center m-4">
         <MathJaxContext>
         <MathJax className="Math-c m-2">{"\\("+"y=ax+b"+"\\)"}</MathJax>
-        <MathJax className="Math-c m-2">{"\\("+`a=${(summary.slope||0).toFixed(2)}`+"\\)"}</MathJax>
-        <MathJax className="Math-c m-2">{"\\("+`b=${(summary.intercept||0).toFixed(2)}`+"\\)"}</MathJax>
+
+
+       
+            <div className='d-flex m-2'>
+            <MathJax className="Math-c">{"\\(a =\\)"}</MathJax>
+            <div><b>{(summary.slope||0).toFixed(2)}</b></div></div>
+      
+
+    
+            <div className='d-flex m-2'>
+            <MathJax className="Math-c">{"\\(b =\\)"}</MathJax>
+            <div><b>{(summary.intercept||0).toFixed(2)}</b></div></div>
+      
         </MathJaxContext>
         </div>
         <Scatter
