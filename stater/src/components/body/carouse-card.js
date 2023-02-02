@@ -6,6 +6,7 @@ import {
   MDBCardText,
   MDBBtn
 } from 'mdb-react-ui-kit';
+import {Link} from 'react-router-dom';
 
 export default function CarouselCard(props) {
   const id = props.data.id
@@ -29,7 +30,8 @@ export default function CarouselCard(props) {
         <MDBCardText className='text-white card-carousel'>{description}</MDBCardText>
         <div className='justify-content-center align-items-center h-100'>
                 <div className='text-white'>
-                <MDBBtn tag="a" outline size="lg" href={link}>
+                <MDBBtn tag="a" outline size="lg">
+                  <Link to={link}></Link>
                 Vamos!
                 </MDBBtn>
                 </div>
