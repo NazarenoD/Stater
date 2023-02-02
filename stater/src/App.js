@@ -15,7 +15,8 @@ import Normal from './components/distributions/normal/normal';
 import AOV from './components/anova/groups';
 import Regression from './components/regression/groups';
 
-
+//- npm run build
+//- npm run deploy
 
 function App() {
   return (

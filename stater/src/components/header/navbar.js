@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import {Link} from 'react-router-dom';
 
 
 import {
@@ -39,30 +39,30 @@ export default function Navbar() {
         <MDBCollapse navbar show={showBasic}>
           <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current='page' href={"/"}>
-                Inicio
+              <MDBNavbarLink active aria-current='page'>
+              <Link to="/">Inicio</Link>
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current='page' href={"/Anova"}>
-                Anova
+              <MDBNavbarLink active aria-current='page'>
+              <Link to="/Anova">Anova</Link>
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current='page' href={"/Regression"}>
-                Regresion
+              <MDBNavbarLink active aria-current='page'>
+              <Link to="/Regression">Regresion</Link>
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBDropdown>
-                <MDBDropdownToggle tag='a' className='nav-link' role='button'>
+                <MDBDropdownToggle tag='a' className='nav-link text-primary' role='button'>
                   Distribuciones
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
-                  <MDBDropdownItem link href={"/Binomial"}><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Bin &nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Binomial </MDBDropdownItem>
-                  <MDBDropdownItem link href={"/Hipergeometric"}><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Hgeo</span>&nbsp;&nbsp; Hipergeometrica </MDBDropdownItem>
-                  <MDBDropdownItem link href={"/Poisson"}><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Po &nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Poisson </MDBDropdownItem>
-                  <MDBDropdownItem link href={"/Normal"}><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ N &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Normal </MDBDropdownItem>
+                  <MDBDropdownItem link><Link to="/Binomial"><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Bin &nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Binomial </Link></MDBDropdownItem>
+                  <MDBDropdownItem link ><Link to="/Hipergeometric"><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Hgeo</span>&nbsp;&nbsp; Hipergeometrica </Link></MDBDropdownItem>
+                  <MDBDropdownItem link ><Link to="/Poisson"><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ Po &nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Poisson </Link></MDBDropdownItem>
+                  <MDBDropdownItem link ><Link to="/Normal"><i class="fas fa-dice"></i><span class="badge badge-success rounded-pill d-inline">~ N &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp; Normal </Link></MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarItem>
